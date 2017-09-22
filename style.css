@@ -9,7 +9,7 @@ body {
 }
 
 .container {
-    width: 95%;
+    width: 90%;
     max-width: 1000px;
     margin: 0 auto;
 }
@@ -30,13 +30,16 @@ header::after {
 .logo {
     float: left;
     margin: 0;
-    font-size: 1rem;
-    text-transform: uppercase;
-    font-weight: 700;
+    font-weight: 300;
+    font-size: 1.8rem;
+   
 }
 
 .logo span {
-    font-weight: 300;
+    
+     font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 700;
 }
 
 .site-nav {
@@ -72,4 +75,12 @@ header::after {
     background: #E4B363;
     color: #464655;
     font-weight: 500;
+}
+
+.menu-toggle {
+    background: #000000;
+    padding: 1em;
+    position: absolute;
+    top: 1em;
+    right: 1em;
 }
