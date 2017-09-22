@@ -1,0 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Quicksand', sans-serif;
+    background: #F0F8EA;
+}
+
+.container {
+    width: 95%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+header
