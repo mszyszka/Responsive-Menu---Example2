@@ -32,12 +32,10 @@ header::after {
     margin: 0;
     font-weight: 300;
     font-size: 1.8rem;
-   
 }
 
 .logo span {
-    
-     font-size: 1rem;
+    font-size: 1rem;
     text-transform: uppercase;
     font-weight: 700;
 }
@@ -47,6 +45,12 @@ header::after {
     top: 100%;
     right: 0;
     background: #464655;
+    height: 0;
+    overflow: hidden;
+}
+
+.site-nav-open {
+    height: auto;
 }
 
 .site-nav ul {
@@ -58,6 +62,7 @@ header::after {
 .site-nav ul li {
     border-bottom: 1px solid #575766;
 }
+
 .site-nav ul li:last-child {
     border: none;
 }
@@ -98,6 +103,7 @@ header::after {
 .hamburger::before {
     transform: translateY(-7px);
 }
+
 .hamburger::after {
     transform: translateY(4px);
 }
