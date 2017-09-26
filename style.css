@@ -45,13 +45,17 @@ header::after {
     top: 100%;
     right: 0;
     background: #464655;
+/*
     height: 0;
     overflow: hidden;
+*/
+    clip-path: circle(0px at top right);
+    transition: clip-path ease-in-out 800ms;
 }
 
 .site-nav-open {
-    height: auto;
-    
+/*    height: auto;*/
+    clip-path: circle(150%  at top right);
 }
 
 .site-nav ul {
@@ -62,7 +66,7 @@ header::after {
 
 .site-nav ul li {
     border-bottom: 1px solid #575766;
-        text-align: center;
+    text-align: left;
 }
 
 .site-nav ul li:last-child {
@@ -73,7 +77,7 @@ header::after {
     text-decoration: none;
     text-transform: uppercase;
     display: block;
-    padding: 2em 6em;
+    padding: 2em 4em 2em 1.5em;
     color: #F0F8EA;
 }
 
@@ -83,7 +87,14 @@ header::after {
     color: #464655;
     font-weight: 500;
 }
-
+.site-nav-icon{
+   display: inline-block;
+    font-size: 1.5em;
+    margin-right: 1em;
+    width: 1.1em;
+    text-align: right;
+    color: rgba(255,255,255,.4);
+}
 .menu-toggle {
     position: absolute;
     top: 2em;
@@ -100,6 +111,7 @@ header::after {
     height: 3px;
     width: 1.75em;
     border-radius: 3px;
+    transition: all ease-in-out 500ms;
 }
 
 .hamburger::before {
@@ -119,5 +131,39 @@ header::after {
 }
 
 .open .hamburger::after {
-    transform:  translateY(-3px) rotate(-90deg);
-;}
+    transform: translateY(-3px) rotate(-90deg);
+    ;
+}
+
+@media(min-width: 700px) {
+    
+    .menu-toggle {
+        display: none;
+    }
+    
+    .site-nav {
+        height: auto;
+        position: relative;
+        background: transparent;
+        float: right;
+        line-height: 2.2;
+        clip-path: initial;
+    }
+    .site-nav ul li {
+        display: inline-block;
+        border-bottom: none;
+    }
+    .site-nav ul li a {
+        padding: 0;
+        margin-left: 1.7em;
+    }
+    .site-nav ul li a:hover,
+    .site-nav ul li a:focus {
+       background: transparent;
+    }
+    
+    .site-nav-icon {
+        display: none;
+    }
+}
+
