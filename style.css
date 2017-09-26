@@ -51,6 +51,7 @@ header::after {
 
 .site-nav-open {
     height: auto;
+    
 }
 
 .site-nav ul {
@@ -61,6 +62,7 @@ header::after {
 
 .site-nav ul li {
     border-bottom: 1px solid #575766;
+        text-align: center;
 }
 
 .site-nav ul li:last-child {
@@ -107,3 +109,15 @@ header::after {
 .hamburger::after {
     transform: translateY(4px);
 }
+
+.open .hamburger {
+    transform: rotate(45deg);
+}
+
+.open .hamburger::before {
+    opacity: 0;
+}
+
+.open .hamburger::after {
+    transform:  translateY(-3px) rotate(-90deg);
+;}
