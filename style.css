@@ -46,13 +46,13 @@ header::after {
     top: 100%;
     right: 0;
     background: #464655;
-    height: 0;
-    overflow: hidden;
-    width: 100%
+    width: 100%;
+    clip-path: circle(0px at top right);
+    transition: clip-path ease-in-out 700ms;
 }
 
 .site-nav-open {
-    height: auto;
+    clip-path: circle(1000px at top right );
 }
 
 .site-nav ul {
@@ -134,8 +134,34 @@ header::after {
     transform: translateY(-3px)rotate(-90deg);
 }
 
-@media(min-width: 700px){
+@media(min-width: 700px) {
     .menu-toggle {
+        display: none;
+    }
+    .site-nav {
+        height: auto;
+        display: block;
+        position: relative;
+        background: transparent;
+        float: right;
+        width: auto;
+        line-height: 3em;
+        clip-path: initial;
+    }
+    .site-nav li {
+        display: inline-block;
+        border: none;
+    }
+    .site-nav a {
+        padding: 0;
+        margin-left: 1em;
+    }
+    .site-nav a:hover,
+    .site-nav a:focus
+    {
+        background: transparent;
+    }
+    .site-nav-icon {
         display: none;
     }
 }
