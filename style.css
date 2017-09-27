@@ -48,7 +48,9 @@ header::after {
     background: #464655;
     height: 0;
     overflow: hidden;
+    width: 100%
 }
+
 .site-nav-open {
     height: auto;
 }
@@ -67,10 +69,13 @@ header::after {
 
 .site-nav a {
     color: #EBEBD3;
-    display: block;
-    padding: 2em 6em;
+    display: inline-block;
+    padding: 2em 1em;
+    box-sizing: border-box;
     text-transform: uppercase;
     text-decoration: none;
+    width: 100%;
+    text-align: center;
 }
 
 .site-nav a:hover,
@@ -89,6 +94,14 @@ header::after {
     cursor: pointer;
 }
 
+.site-nav-icon {
+    font-size: 1.2rem;
+    width: 1.4rem;
+    text-align: right;
+    margin-right: 10px;
+    color: rgba(255, 255, 255, .45)
+}
+
 .hamburger,
 .hamburger::before,
 .hamburger::after {
@@ -98,14 +111,31 @@ header::after {
     width: 2em;
     height: 3px;
     border-radius: 3px;
+    transition: all ease-in-out 500ms;
 }
 
 .hamburger::before {
     transform: translateY(-7px);
 }
+
 .hamburger::after {
     transform: translateY(4px);
 }
 
-background: #E54B4B;
-background: #464655;
+.open .hamburger {
+    transform: rotate(315deg);
+}
+
+.open .hamburger::before {
+    opacity: 0;
+}
+
+.open .hamburger::after {
+    transform: translateY(-3px)rotate(-90deg);
+}
+
+@media(min-width: 700px){
+    .menu-toggle {
+        display: none;
+    }
+}
